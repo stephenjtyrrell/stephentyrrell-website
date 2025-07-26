@@ -1,9 +1,9 @@
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling
-    const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+    // Smooth scrolling for all internal links
+    const allInternalLinks = document.querySelectorAll('a[href^="#"]');
     
-    navLinks.forEach(link => {
+    allInternalLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
@@ -39,9 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Get form data
             const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
+            const name = sanitizeInput(formData.get('name') || '');
+            const email = sanitizeInput(formData.get('email') || '');
+            const message = sanitizeInput(formData.get('message') || '');
             
             // Simple form validation
             if (!name || !email || !message) {
@@ -51,6 +51,17 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (!isValidEmail(email)) {
                 showNotification('Please enter a valid email address', 'error');
+                return;
+            }
+            
+            // Additional validation
+            if (name.length < 2 || name.length > 100) {
+                showNotification('Name must be between 2 and 100 characters', 'error');
+                return;
+            }
+            
+            if (message.length < 10 || message.length > 1000) {
+                showNotification('Message must be between 10 and 1000 characters', 'error');
                 return;
             }
             
@@ -76,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.project-card, .skill-item, .contact-item');
+    const animateElements = document.querySelectorAll('.project-card, .skill-item, .contact-item, .expertise-category, .education-item');
     animateElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(20px)';
@@ -87,13 +98,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add typing animation to hero title
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
-        const text = heroTitle.innerHTML;
-        heroTitle.innerHTML = '';
+        // Get the text content while preserving the structure
+        const highlightSpan = heroTitle.querySelector('.highlight');
+        const beforeText = "Hello, I'm ";
+        const highlightText = highlightSpan ? highlightSpan.textContent : "Stephen Tyrrell";
+        const fullText = beforeText + highlightText;
+        
+        heroTitle.textContent = '';
         let i = 0;
         
         function typeWriter() {
-            if (i < text.length) {
-                heroTitle.innerHTML += text.charAt(i);
+            if (i < fullText.length) {
+                if (i < beforeText.length) {
+                    heroTitle.textContent += fullText.charAt(i);
+                } else if (i === beforeText.length) {
+                    // Start the highlight span
+                    const span = document.createElement('span');
+                    span.className = 'highlight';
+                    heroTitle.appendChild(span);
+                    span.textContent += fullText.charAt(i);
+                } else {
+                    // Continue adding to highlight span
+                    const span = heroTitle.querySelector('.highlight');
+                    span.textContent += fullText.charAt(i);
+                }
                 i++;
                 setTimeout(typeWriter, 100);
             }
@@ -141,8 +169,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Utility functions
 function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    // More robust email validation
+    const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+    return emailRegex.test(email) && email.length <= 254; // RFC 5321 limit
+}
+
+function sanitizeInput(input) {
+    // Basic input sanitization
+    return input.toString().trim().substring(0, 1000); // Limit length
 }
 
 function showNotification(message, type = 'info') {
