@@ -3,11 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stephen Tyrrell</title>
-    <meta name="description" content="Stephen Tyrrell - Developer, Creator, Innovator">
+    <title>Stephen Tyrrell - .NET Developer | Dynamics 365 | Angular | DevOps</title>
+    <meta name="description" content="Stephen Tyrrell - Senior .NET Developer specialising in Dynamics CRM/365, Angular development, and DevOps practices. Currently pursuing Masters in DevOps.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Security Headers via Meta Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
 </head>
 <body>
     <div class="container">
@@ -16,8 +25,9 @@
             <div class="nav-brand">
                 <h1>Stephen Tyrrell</h1>
             </div>
-            <div class="nav-links">
+                <div class="nav-links">
                 <a href="#about" class="nav-link">About</a>
+                <a href="#expertise" class="nav-link">Expertise</a>
                 <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -32,18 +42,20 @@
         <section class="hero">
             <div class="hero-content">
                 <h2 class="hero-title">
-                    Hello, I'm <span class="highlight">Stephen</span>
+                    Hello, I'm <span class="highlight">Stephen Tyrrell</span>
                 </h2>
                 <p class="hero-subtitle">
-                    Developer • Creator • Problem Solver
+                    Senior .NET Developer • Dynamics 365 Specialist • Angular Expert
                 </p>
                 <p class="hero-description">
-                    I build digital experiences that make a difference. 
-                    Passionate about AI, web development, and creating solutions that matter.
+                    I build robust enterprise solutions with .NET and Dynamics 365, create modern web applications with Angular, 
+                    and implement DevOps practices to streamline development workflows. Currently pursuing a Masters in DevOps.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#expertise" class="btn btn-primary">View My Expertise</a>
+                    <a href="https://www.linkedin.com/in/stephen-tyrrell" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                        <i class="fab fa-linkedin"></i> Connect on LinkedIn
+                    </a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -59,45 +71,130 @@
         <section id="about" class="about">
             <div class="section-header">
                 <h2>About Me</h2>
-                <p>Passionate about technology and innovation</p>
+                <p>Passionate about enterprise software development and DevOps transformation</p>
             </div>
             <div class="about-content">
                 <div class="about-text">
                     <p>
-                        I'm a developer with a passion for creating meaningful digital experiences. 
-                        My journey spans across various technologies and frameworks, always with a focus 
-                        on building solutions that make a real impact.
+                        I'm a seasoned .NET developer with extensive experience in building enterprise-grade applications 
+                        and customising Microsoft Dynamics CRM/365 solutions. My expertise spans the full development 
+                        lifecycle, from requirements gathering to deployment and maintenance.
                     </p>
                     <p>
-                        Whether it's developing AI-powered applications, creating responsive web interfaces, 
-                        or solving complex technical challenges, I approach each project with curiosity 
-                        and dedication to excellence.
+                        With strong Angular skills, I create modern, responsive web applications that provide 
+                        exceptional user experiences. Currently pursuing a Masters in DevOps, I'm passionate about 
+                        implementing CI/CD pipelines, infrastructure as code, and automation to improve development workflows.
+                    </p>
+                    <p>
+                        I thrive in collaborative environments where I can contribute to both technical excellence 
+                        and business success through innovative software solutions.
                     </p>
                 </div>
-                <div class="skills">
-                    <div class="skill-item">
-                        <i class="fab fa-js-square"></i>
-                        <span>JavaScript</span>
+                <div class="education">
+                    <h3>Current Studies</h3>
+                    <div class="education-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <strong>Masters in DevOps</strong>
+                            <p>Currently studying advanced DevOps practices, cloud infrastructure, and automation</p>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <i class="fab fa-python"></i>
-                        <span>Python</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="expertise">
+            <div class="section-header">
+                <h2>Technical Expertise</h2>
+                <p>Core technologies and specialized skills</p>
+            </div>
+            <div class="expertise-grid">
+                <div class="expertise-category">
+                    <h3><i class="fab fa-microsoft"></i> .NET Ecosystem</h3>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>C# / .NET Framework / .NET Core</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-globe"></i>
+                            <span>ASP.NET MVC / Web API</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>Entity Framework / SQL Server</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>WPF / WinForms</span>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <i class="fab fa-react"></i>
-                        <span>React</span>
+                </div>
+                
+                <div class="expertise-category">
+                    <h3><i class="fas fa-cogs"></i> Dynamics 365 / CRM</h3>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Custom Plugin Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-workflow"></i>
+                            <span>Workflow & Business Process Flows</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-th-large"></i>
+                            <span>Custom Entities & Forms</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-link"></i>
+                            <span>Web API & SDK Integration</span>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <i class="fas fa-robot"></i>
-                        <span>AI/ML</span>
+                </div>
+                
+                <div class="expertise-category">
+                    <h3><i class="fab fa-angular"></i> Frontend Development</h3>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <i class="fab fa-angular"></i>
+                            <span>Angular / TypeScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5 / CSS3 / SCSS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript / ES6+</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive Design</span>
+                        </div>
                     </div>
-                    <div class="skill-item">
-                        <i class="fas fa-cloud"></i>
-                        <span>Cloud</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-git-alt"></i>
-                        <span>Git</span>
+                </div>
+                
+                <div class="expertise-category">
+                    <h3><i class="fas fa-tools"></i> DevOps & Tools</h3>
+                    <div class="skills">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git / Azure DevOps</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-infinity"></i>
+                            <span>CI/CD Pipelines</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker / Containerization</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-cloud"></i>
+                            <span>Azure Cloud Services</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,54 +204,102 @@
         <section id="projects" class="projects">
             <div class="section-header">
                 <h2>Featured Projects</h2>
-                <p>Some of my recent work</p>
+                <p>Enterprise solutions and open-source contributions</p>
             </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>AI Agent Framework</h3>
+                        <h3>Dynamics 365 Custom Solutions</h3>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/stephenjtyrrell" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <p>A comprehensive framework for building intelligent AI agents with advanced reasoning capabilities.</p>
+                    <p>Custom Dynamics 365 implementations including plugin development, workflow automation, and custom entity creation for enterprise clients.</p>
                     <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">AI</span>
-                        <span class="tag">Machine Learning</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">Dynamics 365</span>
+                        <span class="tag">CRM SDK</span>
+                        <span class="tag">SQL Server</span>
                     </div>
                 </div>
                 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Web Application Suite</h3>
+                        <h3>Angular Enterprise Applications</h3>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/stephenjtyrrell" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <p>Modern web applications built with cutting-edge technologies and best practices.</p>
+                    <p>Modern web applications built with Angular, featuring responsive design, real-time data integration, and optimised performance.</p>
                     <div class="project-tags">
-                        <span class="tag">React</span>
+                        <span class="tag">Angular</span>
                         <span class="tag">TypeScript</span>
-                        <span class="tag">Node.js</span>
+                        <span class="tag">RxJS</span>
+                        <span class="tag">SCSS</span>
                     </div>
                 </div>
                 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Developer Tools</h3>
+                        <h3>.NET Core API Solutions</h3>
                         <div class="project-links">
-                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/stephenjtyrrell" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <p>Productivity tools and utilities that help developers work more efficiently.</p>
+                    <p>RESTful APIs built with .NET Core, implementing clean architecture patterns, authentication, and comprehensive testing.</p>
                     <div class="project-tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">CLI</span>
-                        <span class="tag">Automation</span>
+                        <span class="tag">.NET Core</span>
+                        <span class="tag">Web API</span>
+                        <span class="tag">Entity Framework</span>
+                        <span class="tag">JWT</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Checklist Generator & Utilities</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/stephenjtyrrell/checklist-generator" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p>C# utility applications and tools, including a checklist generator and other productivity solutions. Explore my 25+ public repositories for more examples.</p>
+                    <div class="project-tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">Utilities</span>
+                        <span class="tag">Productivity Tools</span>
+                        <span class="tag">Open Source</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>DevOps & Infrastructure</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/stephenjtyrrell" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p>CI/CD pipeline implementations, containerisation strategies, and infrastructure as code solutions using Azure DevOps and modern DevOps practices.</p>
+                    <div class="project-tags">
+                        <span class="tag">Azure DevOps</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">YAML</span>
+                        <span class="tag">PowerShell</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Open Source Contributions</h3>
+                        <div class="project-links">
+                            <a href="https://github.com/stephenjtyrrell?tab=repositories" target="_blank" rel="noopener noreferrer" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <p>Browse through my collection of 25+ public repositories showcasing various technologies, from utility applications to experimental projects and learning exercises.</p>
+                    <div class="project-tags">
+                        <span class="tag">Open Source</span>
+                        <span class="tag">Various Tech</span>
+                        <span class="tag">Learning Projects</span>
+                        <span class="tag">Community</span>
                     </div>
                 </div>
             </div>
@@ -164,7 +309,7 @@
         <section id="contact" class="contact">
             <div class="section-header">
                 <h2>Let's Connect</h2>
-                <p>I'm always interested in new opportunities and collaborations</p>
+                <p>Open to new opportunities and collaborations in .NET, Dynamics 365, and DevOps</p>
             </div>
             <div class="contact-content">
                 <div class="contact-info">
@@ -174,27 +319,27 @@
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-linkedin"></i>
-                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/stephen-tyrrell" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
                     </div>
                     <div class="contact-item">
                         <i class="fab fa-github"></i>
-                        <a href="#" target="_blank">GitHub</a>
+                        <a href="https://github.com/stephenjtyrrell" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
                     </div>
                     <div class="contact-item">
-                        <i class="fab fa-twitter"></i>
-                        <a href="#" target="_blank">Twitter</a>
+                        <i class="fas fa-file-alt"></i>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Download CV</a>
                     </div>
                 </div>
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder="Your Name" maxlength="100" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder="Your Email" maxlength="254" required>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" maxlength="1000" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
@@ -204,7 +349,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2025 Stephen Tyrrell. Built with passion and code.</p>
+            <p>&copy; 2025 Stephen Tyrrell. Senior .NET Developer | Dynamics 365 Specialist | DevOps Enthusiast</p>
         </footer>
     </div>
 
